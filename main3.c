@@ -36,10 +36,8 @@ char XNOR(char x, char y) {
 }
 
 void logic_function(void) {
-	PORTBbits.RB4 = OR(AND(OR(AND(AND(PORTDbits.RD1,PORTDbits.RD4),XOR(PORTDbits.RD2,PORTDbits.RD5)),AND(PORTDbits.RD2,PORTDbits.RD5)),XOR(PORTDbits.RD3,PORTDbits.RD6)),AND(PORTDbits.RD3,PORTDbits.RD6));
-	PORTBbits.RB2 = XOR(AND(PORTDbits.RD1,PORTDbits.RD4),XOR(PORTDbits.RD2,PORTDbits.RD5));
-	PORTBbits.RB3 = XOR(OR(AND(AND(PORTDbits.RD1,PORTDbits.RD4),XOR(PORTDbits.RD2,PORTDbits.RD5)),AND(PORTDbits.RD2,PORTDbits.RD5)),XOR(PORTDbits.RD3,PORTDbits.RD6));
-	PORTBbits.RB1 = XOR(PORTDbits.RD1,PORTDbits.RD4);
+	PORTBbits.RB0 = XOR(PORTDbits.RD0,PORTDbits.RD1);
+	PORTBbits.RB1 = AND(PORTDbits.RD0,PORTDbits.RD1);
 }
 
 void main(void) {
